@@ -11,6 +11,14 @@ public class PistolControll : MonoBehaviour
     [SerializeField] bool hasMagazin;
     [SerializeField] MagazineData magazineData;
 
+    private void FixedUpdate()
+    {
+        if(magazineData != null)
+        {
+            magazineData.Bullet = pistolData.CurBullet;
+        }
+    }
+
     private void GetMagazine()
     {
         hasMagazin = hasMagazin == false ? true : false;
@@ -23,7 +31,7 @@ public class PistolControll : MonoBehaviour
     {
         if (magazineData == null) return;
 
-        pistolData.CurBullet = magazineData.CurBullet;
+        pistolData.CurBullet = magazineData.Bullet;
 
         if (pistolData.CurBullet > 0)
             pistolData.OnFire = true;
@@ -37,6 +45,7 @@ public class PistolControll : MonoBehaviour
         {
             magazineData = other.transform.parent.GetComponent<MagazineData>();
             GetMagazine();
+            Debug.Log("≈∫√¢ ∞·«’");
         }
     }
 
@@ -46,6 +55,7 @@ public class PistolControll : MonoBehaviour
         {
             magazineData = null;
             GetMagazine();
+            Debug.Log("≈∫√¢ ∫–∏Æ");
         }
     }
 }

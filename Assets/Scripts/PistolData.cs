@@ -13,6 +13,9 @@ public class PistolData : MonoBehaviour
     private void FixedUpdate()
     {
         if (curBullet <= 0)
+        {
             OnFire = false;
+            Debug.Log("사격 불가!");
+        }
     }
 }

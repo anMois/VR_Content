@@ -16,6 +16,7 @@ public class Shoot : MonoBehaviour
         Rigidbody rigid = bullet.GetComponent<Rigidbody>();
         rigid.velocity = bullet.transform.forward * speed;
         pistolData.CurBullet--;
+        Debug.Log($"ÇöÀç ³²Àº Åº : {pistolData.CurBullet}");
     }
 
     public void Fire_Raycast()

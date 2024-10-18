@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class MagazineData : MonoBehaviour
 {
-    [SerializeField] int curBullet;
+    [SerializeField] int bullet;
     [SerializeField] int maxBullet;
 
-    public int CurBullet { get {  return curBullet; }  set { curBullet = value; } }
+    public int Bullet { get {  return bullet; }  set { bullet = value; } }
     public int MaxBullet { get { return maxBullet; } }
-
 }
