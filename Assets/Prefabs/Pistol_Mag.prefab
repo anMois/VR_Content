@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3296684036300380768}
   - component: {fileID: 3296684036300380764}
   - component: {fileID: 3296684036300380769}
+  - component: {fileID: 8402258826762935729}
   m_Layer: 0
   m_Name: Pistol_Mag
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3296684036300380770}
-  m_LocalRotation: {x: 0.50000006, y: -0.49999994, z: -0.4999985, w: 0.50000155}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 1.349, y: 0.52999973, z: 3.572}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -37,7 +38,7 @@ Transform:
   - {fileID: 3296684036656592654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!33 &3296684036300380766
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -134,7 +135,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 3
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -268,6 +269,20 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &8402258826762935729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3296684036300380770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1e52287f4b38744d8164f955135f652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curBullet: 0
+  maxBullet: 8
 --- !u!1 &3296684036444099794
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +294,7 @@ GameObject:
   - component: {fileID: 3296684036444099793}
   - component: {fileID: 3296684036444099792}
   m_Layer: 0
-  m_Name: Collider
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,7 +339,7 @@ GameObject:
   - component: {fileID: 3296684036656592654}
   - component: {fileID: 3296684036656592653}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
