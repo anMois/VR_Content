@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 3296684036300380765}
   - component: {fileID: 3296684036300380766}
   - component: {fileID: 3296684036300380767}
+  - component: {fileID: 5699406205862036694}
   - component: {fileID: 3296684036300380768}
   - component: {fileID: 3296684036300380764}
   - component: {fileID: 3296684036300380769}
   - component: {fileID: 8402258826762935729}
   m_Layer: 0
   m_Name: Pistol_Mag
-  m_TagString: Untagged
+  m_TagString: Mag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +36,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3296684036444099793}
-  - {fileID: 3296684036656592654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
@@ -89,6 +89,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5699406205862036694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3296684036300380770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.042171836, y: 0.0121359825, z: 0.06600475}
+  m_Center: {x: -0.000068414956, y: 0.006143689, z: 0.0015096664}
 --- !u!54 &3296684036300380768
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -281,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e52287f4b38744d8164f955135f652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curBullet: 0
+  bullet: 3
   maxBullet: 8
 --- !u!1 &3296684036444099794
 GameObject:
@@ -328,48 +341,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.024030391, y: 0.14150707, z: 0.04938023}
   m_Center: {x: -0.00015904292, y: 0.0810594, z: -0.0018665392}
---- !u!1 &3296684036656592655
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3296684036656592654}
-  - component: {fileID: 3296684036656592653}
-  m_Layer: 0
-  m_Name: Floor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3296684036656592654
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3296684036656592655}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3296684036300380765}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3296684036656592653
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3296684036656592655}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.042171836, y: 0.0121359825, z: 0.06600475}
-  m_Center: {x: -0.000068414956, y: 0.006143689, z: 0.0015096664}

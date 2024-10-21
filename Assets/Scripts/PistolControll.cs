@@ -15,7 +15,9 @@ public class PistolControll : MonoBehaviour
     {
         if(magazineData != null)
         {
+            Debug.Log(magazineData.Bullet + " 교체 전");
             magazineData.Bullet = pistolData.CurBullet;
+            Debug.Log(magazineData.Bullet + " 교체 후");
         }
     }
 

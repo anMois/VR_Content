@@ -8,7 +8,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] Transform muzzlePoint;
     [SerializeField] float speed;
 
-    public void Fire_GameObject()
+    public void PistolFire_GameObject()
     {
         if (pistolData.OnFire == false) return;
 
