@@ -96,9 +96,10 @@ GameObject:
   - component: {fileID: 7275344131297312533}
   - component: {fileID: 2603801309267588092}
   - component: {fileID: 4989828919423514445}
+  - component: {fileID: 8825503269878116249}
   m_Layer: 0
   m_Name: Bullet_Pistol
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,3 +198,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &8825503269878116249
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221061416694144704}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.010267107
+  m_Height: 0.07273826
+  m_Direction: 2
+  m_Center: {x: -0.00009895302, y: 0.000036748435, z: -0.0026309397}

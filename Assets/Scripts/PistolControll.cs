@@ -7,11 +7,14 @@ public class PistolControll : MonoBehaviour
     [Header("ÅºÃ¢ °ü·Ã")]
     [SerializeField] bool hasMagazin;
     [SerializeField] MagazineData magazineData;
+
     public MagazineData MagazineData { get { return magazineData; } set { magazineData = value; } }
 
     public void MagazineOut()
     {
+        magazineData.OnFire = false;
         magazineData = null;
+        Debug.Log("ÅºÃ¢ ºÐ¸®");
         GetMagazine();
     }
 
@@ -19,17 +22,13 @@ public class PistolControll : MonoBehaviour
     {
         hasMagazin = hasMagazin == false ? true : false;
         handle.isTrigger = hasMagazin;
-
+        Debug.Log("ÅºÃ¢ °áÇÕ");
         PistolInit();
     }
 
     private void PistolInit()
     {
-        if (magazineData == null)
-        {
-            magazineData.OnFire = false;
-            return;
-        }
+        if (magazineData == null) return;
 
         if (magazineData.Bullet > 0)
             magazineData.OnFire = true;

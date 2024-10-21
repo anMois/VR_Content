@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MagazineData : MonoBehaviour
@@ -11,4 +9,12 @@ public class MagazineData : MonoBehaviour
     public int Bullet { get {  return bullet; }  set { bullet = value; } }
     public int MaxBullet { get { return maxBullet; } }
     public bool OnFire { get { return onFire; } set { onFire = value; } }
+
+    private void Update()
+    {
+        if(bullet <= 0)
+        {
+            onFire = false;
+        }
+    }
 }
