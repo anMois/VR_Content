@@ -11,6 +11,7 @@ public class ReroadControll : MonoBehaviour
         if (magData == null || magData.Bullet == magData.MaxBullet) return;
 
         magData.Bullet = magData.MaxBullet;
+        Debug.Log("Åº¾à ÃæÀü");
     }
 
     public void ReloadOut()

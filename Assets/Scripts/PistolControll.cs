@@ -43,9 +43,9 @@ public class PistolControll : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.parent.CompareTag("Mag"))
+        if(other.transform.CompareTag("Mag"))
         {
-            magazineData = other.transform.parent.GetComponent<MagazineData>();
+            magazineData = other.transform.GetComponent<MagazineData>();
             GetMagazine();
             Debug.Log("≈∫√¢ ∞·«’");
         }
