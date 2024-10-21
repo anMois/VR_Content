@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] PistolData pistolData;
+    [SerializeField] PistolControll pistol;
 
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform muzzlePoint;
@@ -10,13 +10,12 @@ public class Shoot : MonoBehaviour
 
     public void PistolFire_GameObject()
     {
-        if (pistolData.OnFire == false) return;
+        if (pistol.MagazineData.OnFire == false || pistol.MagazineData.Bullet < 0) return;
 
         GameObject bullet = Instantiate(bulletPrefab, muzzlePoint.position, muzzlePoint.rotation);
         Rigidbody rigid = bullet.GetComponent<Rigidbody>();
         rigid.velocity = bullet.transform.forward * speed;
-        pistolData.CurBullet--;
-        Debug.Log($"ÇöÀç ³²Àº Åº : {pistolData.CurBullet}");
+        pistol.MagazineData.Bullet--;
     }
 
     public void Fire_Raycast()

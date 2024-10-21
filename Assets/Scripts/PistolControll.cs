@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class PistolControll : MonoBehaviour
 {
-    [SerializeField] PistolData pistolData;
     [SerializeField] BoxCollider handle;
 
     [Header("ÅºÃ¢ °ü·Ã")]
     [SerializeField] bool hasMagazin;
     [SerializeField] MagazineData magazineData;
+    public MagazineData MagazineData { get { return magazineData; } set { magazineData = value; } }
 
     public void MagazineOut()
     {
@@ -27,17 +27,14 @@ public class PistolControll : MonoBehaviour
     {
         if (magazineData == null)
         {
-            pistolData.OnFire = false;
-            pistolData.CurBullet = 0;
+            magazineData.OnFire = false;
             return;
         }
 
-        pistolData.CurBullet = magazineData.Bullet;
-
-        if (pistolData.CurBullet > 0)
-            pistolData.OnFire = true;
+        if (magazineData.Bullet > 0)
+            magazineData.OnFire = true;
         else
-            pistolData.OnFire = false;
+            magazineData.OnFire = false;
     }
 
     private void OnTriggerEnter(Collider other)
