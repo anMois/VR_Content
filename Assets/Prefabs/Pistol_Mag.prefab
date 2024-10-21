@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3296684036300380767}
   - component: {fileID: 5699406205862036694}
   - component: {fileID: 3296684036300380768}
-  - component: {fileID: 3296684036300380764}
-  - component: {fileID: 3296684036300380769}
   - component: {fileID: 8402258826762935729}
+  - component: {fileID: 3296684036300380769}
+  - component: {fileID: 3296684036300380764}
   m_Layer: 0
   m_Name: Pistol_Mag
   m_TagString: Mag
@@ -118,7 +118,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3296684036300380764
+--- !u!114 &8402258826762935729
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,9 +127,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3296684036300380770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0438b146df2009d4b9127f422b0e9b97, type: 3}
+  m_Script: {fileID: 11500000, guid: c1e52287f4b38744d8164f955135f652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: 3
+  maxBullet: 8
 --- !u!114 &3296684036300380769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +284,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &8402258826762935729
+--- !u!114 &3296684036300380764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,11 +293,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3296684036300380770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1e52287f4b38744d8164f955135f652, type: 3}
+  m_Script: {fileID: 11500000, guid: 0438b146df2009d4b9127f422b0e9b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: 3
-  maxBullet: 8
 --- !u!1 &3296684036444099794
 GameObject:
   m_ObjectHideFlags: 0

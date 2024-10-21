@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PistolControll : MonoBehaviour
@@ -11,17 +9,13 @@ public class PistolControll : MonoBehaviour
     [SerializeField] bool hasMagazin;
     [SerializeField] MagazineData magazineData;
 
-    private void FixedUpdate()
+    public void MagazineOut()
     {
-        if(magazineData != null)
-        {
-            Debug.Log(magazineData.Bullet + " 교체 전");
-            magazineData.Bullet = pistolData.CurBullet;
-            Debug.Log(magazineData.Bullet + " 교체 후");
-        }
+        magazineData = null;
+        GetMagazine();
     }
 
-    private void GetMagazine()
+    public void GetMagazine()
     {
         hasMagazin = hasMagazin == false ? true : false;
         handle.isTrigger = hasMagazin;
@@ -31,7 +25,12 @@ public class PistolControll : MonoBehaviour
 
     private void PistolInit()
     {
-        if (magazineData == null) return;
+        if (magazineData == null)
+        {
+            pistolData.OnFire = false;
+            pistolData.CurBullet = 0;
+            return;
+        }
 
         pistolData.CurBullet = magazineData.Bullet;
 
@@ -43,21 +42,9 @@ public class PistolControll : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.transform.CompareTag("Mag"))
+        if (other.transform.CompareTag("Mag"))
         {
             magazineData = other.transform.GetComponent<MagazineData>();
-            GetMagazine();
-            Debug.Log("탄창 결합");
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform.parent.CompareTag("Mag"))
-        {
-            magazineData = null;
-            GetMagazine();
-            Debug.Log("탄창 분리");
         }
     }
 }
