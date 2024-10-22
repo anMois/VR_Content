@@ -27,7 +27,11 @@ public class ReroadControll : MonoBehaviour
 
     public void ReloadIn()
     {
-        if (magData == null || magData.Bullet == magData.MaxBullet) return;
+        if (magData == null || magData.Bullet == magData.MaxBullet)
+        {
+            TextReset(magData.name);
+            return;
+        }
 
         Debug.Log("Åº¾à ÃæÀü");
         magData.Bullet = magData.MaxBullet;

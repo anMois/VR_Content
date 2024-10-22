@@ -48,9 +48,7 @@ public class PistolControll : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.transform + " / 충돌한 오브젝트");
-
-        if (other.transform.CompareTag("Mag"))
+        if (other.transform.CompareTag("Mag") )
         {
             Debug.Log("탄창 충돌");
             magazineData = other.transform.GetComponent<MagazineData>();

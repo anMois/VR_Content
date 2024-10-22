@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2021980272025737938}
   - component: {fileID: 8091531682142673627}
   - component: {fileID: 1008367203859887213}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet_Pistol_Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,10 +94,10 @@ GameObject:
   - component: {fileID: 8411626981521425530}
   - component: {fileID: 4833419825657285599}
   - component: {fileID: 7275344131297312533}
-  - component: {fileID: 2603801309267588092}
-  - component: {fileID: 4989828919423514445}
+  - component: {fileID: -5285347355787348354}
   - component: {fileID: 8825503269878116249}
-  m_Layer: 0
+  - component: {fileID: 4989828919423514445}
+  m_Layer: 7
   m_Name: Bullet_Pistol
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2603801309267588092
+--- !u!114 &-5285347355787348354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,6 +182,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2017fd5d66b027748972bc5d6085d045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &8825503269878116249
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221061416694144704}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.010267107
+  m_Height: 0.07273826
+  m_Direction: 2
+  m_Center: {x: -0.00009895302, y: 0.000036748435, z: -0.0026309397}
 --- !u!54 &4989828919423514445
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -198,17 +212,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!136 &8825503269878116249
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9221061416694144704}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.010267107
-  m_Height: 0.07273826
-  m_Direction: 2
-  m_Center: {x: -0.00009895302, y: 0.000036748435, z: -0.0026309397}

@@ -7,7 +7,6 @@ public class Board : MonoBehaviour
     [SerializeField] BoardControll boardControll;
     [SerializeField] int score;
 
-
     private void GetScore()
     {
         boardControll.Total += score;

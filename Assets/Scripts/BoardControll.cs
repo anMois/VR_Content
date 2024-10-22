@@ -8,11 +8,21 @@ using UnityEngine;
 public class BoardControll : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] List<GameObject> boards;
     [SerializeField] int total;
-
     public int Total { get { return total; } set {  total = value; } }
 
     private StringBuilder sb = new StringBuilder();
+
+    private void Update()
+    {
+        ActiveBoard();
+    }
+
+    private void LateUpdate()
+    {
+        ScoreTextReset(total.ToString());
+    }
 
     private void ScoreTextReset(string msg)
     {
@@ -21,8 +31,13 @@ public class BoardControll : MonoBehaviour
         scoreText.SetText(sb.ToString());
     }
 
-    private void LateUpdate()
+    private void ActiveBoard()
     {
-        ScoreTextReset(total.ToString());
+        for (int i = 0; i < boards.Count; i++)
+        {
+            if (boards[i].activeSelf) return;
+
+            boards[i].SetActive(true);
+        }
     }
 }
