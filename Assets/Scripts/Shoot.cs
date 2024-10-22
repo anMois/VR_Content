@@ -22,10 +22,8 @@ public class Shoot : MonoBehaviour
     {
         if(Physics.Raycast(muzzlePoint.position, muzzlePoint.forward, out RaycastHit hit, 100))
         {
-            Renderer render = hit.collider.gameObject.GetComponent<Renderer>();
             if(hit.collider.name.Equals("Cube"))
             {
-                render.material.color = Color.yellow;
             }
         }
     }
