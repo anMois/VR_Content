@@ -12,7 +12,7 @@ public class PistolControll : MonoBehaviour
 
     public void MagazineOut()
     {
-        magazineData.OnFire = false;
+        magazineData.FireAble = false;
         magazineData = null;
         Debug.Log("탄창 분리");
         GetMagazine();
@@ -28,18 +28,31 @@ public class PistolControll : MonoBehaviour
 
     private void PistolInit()
     {
-        if (magazineData == null) return;
+        if (magazineData == null)
+        {
+            Debug.Log("데이터 없음");
+            return;
+        }
 
         if (magazineData.Bullet > 0)
-            magazineData.OnFire = true;
+        {
+            Debug.Log("사격 가능");
+            magazineData.FireAble = true;
+        }
         else
-            magazineData.OnFire = false;
+        {
+            Debug.Log("사격 불가능");
+            magazineData.FireAble = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.transform + " / 충돌한 오브젝트");
+
         if (other.transform.CompareTag("Mag"))
         {
+            Debug.Log("탄창 충돌");
             magazineData = other.transform.GetComponent<MagazineData>();
         }
     }

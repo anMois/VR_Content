@@ -1,19 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class BoardControll : MonoBehaviour
 {
-    [SerializeField] int score;
+    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] int total;
 
-    private void OnCollisionEnter(Collision collision)
+    public int Total { get { return total; } set {  total = value; } }
+
+    private StringBuilder sb = new StringBuilder();
+
+    private void ScoreTextReset(string msg)
     {
-        if(collision.transform.CompareTag("Bullet"))
-        {
-            gameObject.SetActive(false);
-            Debug.Log("ÃÑ¾Ë Ãæµ¹");
-            Destroy(collision.transform);
-        }
+        sb.Clear();
+        sb.AppendLine(msg);
+        scoreText.SetText(sb.ToString());
+    }
+
+    private void LateUpdate()
+    {
+        ScoreTextReset(total.ToString());
     }
 }

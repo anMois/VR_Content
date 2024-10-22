@@ -10,7 +10,7 @@ public class Shoot : MonoBehaviour
 
     public void PistolFire_GameObject()
     {
-        if (pistol.MagazineData.OnFire == false) return;
+        if (pistol.MagazineData.FireAble == false) return;
 
         GameObject bullet = Instantiate(bulletPrefab, muzzlePoint.position, muzzlePoint.rotation);
         Rigidbody rigid = bullet.GetComponent<Rigidbody>();

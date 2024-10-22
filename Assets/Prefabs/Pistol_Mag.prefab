@@ -132,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: 3
   maxBullet: 8
+  fireAble: 0
 --- !u!114 &3296684036300380769
 MonoBehaviour:
   m_ObjectHideFlags: 0

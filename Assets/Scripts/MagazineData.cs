@@ -4,17 +4,17 @@ public class MagazineData : MonoBehaviour
 {
     [SerializeField] int bullet;
     [SerializeField] int maxBullet;
-    [SerializeField] bool onFire;
+    [SerializeField] bool fireAble;
 
-    public int Bullet { get {  return bullet; }  set { bullet = value; } }
+    public int Bullet { get { return bullet; } set { bullet = value; } }
     public int MaxBullet { get { return maxBullet; } }
-    public bool OnFire { get { return onFire; } set { onFire = value; } }
+    public bool FireAble { get { return fireAble; } set { fireAble = value; } }
 
     private void Update()
     {
         if(bullet <= 0)
         {
-            onFire = false;
+            fireAble = false;
         }
     }
 }
